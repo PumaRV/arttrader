@@ -1,0 +1,26 @@
+{
+  "name": "fxticks",
+  "version": "1.0.0",
+  "description": "Forex 70 tick chart",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RicardoGeek/fxticks.git"
+  },
+  "keywords": [
+    "forex",
+    "70",
+    "tick",
+    "chart",
+    "candlesticks"
+  ],
+  "author": "RicardoGeek",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/RicardoGeek/fxticks/issues"
+  },
+  "homepage": "https://github.com/RicardoGeek/fxticks#readme"
+}
