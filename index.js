@@ -11,7 +11,7 @@ app.use(parser.urlencoded({
     extended: true
 }));
 app.use(sanitize.middleware());
-app.use(express.static('./frontend/build'));
+app.use(express.static(__dirname + '/frontend/build'));
 
 app.post('/ticks/add', (request, respose) => {
 
