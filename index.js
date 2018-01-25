@@ -26,5 +26,12 @@ app.post('/ticks/add', (request, respose) => {
     respose.send(result.status);
 });
 
+app.get('/ticks', (request, response) => {
+  fxdata.getLastDayTicks((error, results) => {
+    console.log(results);
+    response.send(results);
+  });
+});
+
 app.listen(80, function() {
 });
