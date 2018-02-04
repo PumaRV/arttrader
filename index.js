@@ -26,9 +26,18 @@ app.post('/ticks/add', (request, respose) => {
     respose.send(result.status);
 });
 
-app.get('/ticks', (request, response) => {
-  fxdata.getLastDayTicks((error, results) => {
-    console.log(results);
+app.get('/ticks/:currency/:size', (request, response) => {
+  const currency = request.params.currency;
+  const size = request.params.size;
+  
+  fxdata.getHourlyTicks(currency, size, (error, results) => {
+    response.send(results);
+  });
+});
+
+app.get('/last/:currency', (request, response) => {
+  const currency = request.params.currency;
+  fxdata.getMostRecentTicks(currency, (error, results) => {
     response.send(results);
   });
 });
